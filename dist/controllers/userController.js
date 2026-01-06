@@ -1,0 +1,645 @@
+"use strict";
+
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
+function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); } r ? i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n : (o("next", 0), o("throw", 1), o("return", 2)); }, _regeneratorDefine2(e, r, n, t); }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
+function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
+var User = require("../models/userModel");
+var jwt = require("jsonwebtoken");
+var crypto = require("crypto");
+var sendEmail = require("../utils/sendContactEmail");
+var bcrypt = require("bcryptjs");
+var userLoginController = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee(req, res) {
+    var _req$body, email, password, user, isMatch, token, userData, _t;
+    return _regenerator().w(function (_context) {
+      while (1) switch (_context.p = _context.n) {
+        case 0:
+          _req$body = req.body, email = _req$body.email, password = _req$body.password;
+          _context.p = 1;
+          _context.n = 2;
+          return User.findOne({
+            email: email
+          });
+        case 2:
+          user = _context.v;
+          if (user) {
+            _context.n = 3;
+            break;
+          }
+          return _context.a(2, res.status(404).json({
+            success: false,
+            message: "User not found"
+          }));
+        case 3:
+          _context.n = 4;
+          return user.matchPassword(password);
+        case 4:
+          isMatch = _context.v;
+          if (isMatch) {
+            _context.n = 5;
+            break;
+          }
+          return _context.a(2, res.status(401).json({
+            success: false,
+            message: "Invalid credentials"
+          }));
+        case 5:
+          token = jwt.sign({
+            id: user._id,
+            role: user.role
+          }, process.env.JWT_SECRET);
+          userData = user.toObject();
+          delete userData.password;
+          res.status(200).json({
+            success: true,
+            message: "Logged in successfully",
+            data: _objectSpread(_objectSpread({}, userData), {}, {
+              token: token
+            })
+          });
+          _context.n = 7;
+          break;
+        case 6:
+          _context.p = 6;
+          _t = _context.v;
+          res.status(500).json({
+            success: false,
+            message: _t.message
+          });
+        case 7:
+          return _context.a(2);
+      }
+    }, _callee, null, [[1, 6]]);
+  }));
+  return function userLoginController(_x, _x2) {
+    return _ref.apply(this, arguments);
+  };
+}();
+var createUserController = /*#__PURE__*/function () {
+  var _ref2 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2(req, res) {
+    var newUser, _t2;
+    return _regenerator().w(function (_context2) {
+      while (1) switch (_context2.p = _context2.n) {
+        case 0:
+          _context2.p = 0;
+          newUser = new User(req.body);
+          _context2.n = 1;
+          return newUser.save();
+        case 1:
+          res.status(201).json({
+            success: true,
+            message: "Employee created successfully",
+            newUser: newUser
+          });
+          _context2.n = 3;
+          break;
+        case 2:
+          _context2.p = 2;
+          _t2 = _context2.v;
+          res.status(500).json({
+            success: false,
+            message: _t2.message
+          });
+        case 3:
+          return _context2.a(2);
+      }
+    }, _callee2, null, [[0, 2]]);
+  }));
+  return function createUserController(_x3, _x4) {
+    return _ref2.apply(this, arguments);
+  };
+}();
+var superAdminSignupController = /*#__PURE__*/function () {
+  var _ref3 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3(req, res) {
+    var _req$body2, name, email, password, existingSuperAdmin, newSuperAdmin, superAdminData, token, userWithoutPassword, _t3;
+    return _regenerator().w(function (_context3) {
+      while (1) switch (_context3.p = _context3.n) {
+        case 0:
+          _context3.p = 0;
+          _req$body2 = req.body, name = _req$body2.name, email = _req$body2.email, password = _req$body2.password;
+          _context3.n = 1;
+          return User.findOne({
+            email: email
+          });
+        case 1:
+          existingSuperAdmin = _context3.v;
+          if (!existingSuperAdmin) {
+            _context3.n = 2;
+            break;
+          }
+          return _context3.a(2, res.status(400).json({
+            success: false,
+            message: "SuperAdmin already exists"
+          }));
+        case 2:
+          newSuperAdmin = new User({
+            name: name,
+            email: email,
+            password: password,
+            role: "superadmin",
+            permissions: {
+              create: true,
+              read: true,
+              update: true,
+              "delete": true
+            }
+          });
+          _context3.n = 3;
+          return newSuperAdmin.save();
+        case 3:
+          superAdminData = _context3.v;
+          token = jwt.sign({
+            id: newSuperAdmin._id
+          }, process.env.JWT_SECRET);
+          userWithoutPassword = superAdminData.toObject();
+          delete userWithoutPassword.password;
+          res.status(201).json({
+            success: true,
+            message: "SuperAdmin created successfully",
+            data: _objectSpread(_objectSpread({}, userWithoutPassword), {}, {
+              token: token
+            })
+          });
+          _context3.n = 5;
+          break;
+        case 4:
+          _context3.p = 4;
+          _t3 = _context3.v;
+          res.status(500).json({
+            success: false,
+            message: _t3.message
+          });
+        case 5:
+          return _context3.a(2);
+      }
+    }, _callee3, null, [[0, 4]]);
+  }));
+  return function superAdminSignupController(_x5, _x6) {
+    return _ref3.apply(this, arguments);
+  };
+}();
+var forgotPasswordController = /*#__PURE__*/function () {
+  var _ref4 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4(req, res) {
+    var email, user, resetToken, resetUrl, htmlContent, _t4;
+    return _regenerator().w(function (_context4) {
+      while (1) switch (_context4.p = _context4.n) {
+        case 0:
+          email = req.body.email;
+          _context4.p = 1;
+          _context4.n = 2;
+          return User.findOne({
+            email: email
+          });
+        case 2:
+          user = _context4.v;
+          if (user) {
+            _context4.n = 3;
+            break;
+          }
+          return _context4.a(2, res.status(404).json({
+            success: false,
+            message: "User not found"
+          }));
+        case 3:
+          resetToken = user.getResetPasswordToken(); // Save the user without validation
+          _context4.n = 4;
+          return user.save({
+            validateBeforeSave: false
+          });
+        case 4:
+          // Create the reset URL with the token
+          resetUrl = "".concat(process.env.FRONTEND_URL, "/reset-password?token=").concat(resetToken); // HTML content for the email
+          htmlContent = "\n    <div style=\"font-family: Arial, sans-serif; max-width: 500px; margin: auto; padding: 20px; background-color: white; border: 1px solid #e0e0e0; border-radius: 10px;\">\n      <div style=\"text-align: center;\">\n        <img src=\"https://nbtc-group.vercel.app/logo.png\" alt=\"Nbtc Logo\" style=\"max-width: 150px; margin-bottom: 20px;\">\n      </div>\n      <h2 style=\"color: #333333; text-align: center;\">Reset Your Password</h2>\n      <p style=\"color: #555555;\">Hi <strong>".concat(user.email, "</strong>,</p>\n      <p style=\"color: #555555;\">It seems like you requested a password reset. Click the button below to reset your password:</p>\n      <div style=\"text-align: center; margin: 20px 0;\">\n        <a href='").concat(resetUrl, "' style=\"display: inline-block; padding: 12px 24px; background-color: #00215B; color: #ffffff; text-decoration: none; font-weight: bold; border-radius: 6px;\">Reset Password</a>\n      </div>\n      <p style=\"color: #555555;\">If you didn't request this change, you can safely ignore this email.</p>\n      <p style=\"color: #555555;\">Thank you,<br>The NBTC Group</p>\n      <hr style=\"border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;\">\n      <p style=\"font-size: 12px; color: #999999; text-align: center;\">\n        &copy; 2024 NBTC. All rights reserved.<br>\n      </p>\n    </div>\n    ");
+          _context4.n = 5;
+          return sendEmail({
+            email: user.email,
+            subject: "Password Reset Request",
+            html: htmlContent
+          });
+        case 5:
+          res.status(200).json({
+            success: true,
+            message: "Email sent successfully"
+          });
+          _context4.n = 8;
+          break;
+        case 6:
+          _context4.p = 6;
+          _t4 = _context4.v;
+          console.error(_t4);
+          if (!user) {
+            _context4.n = 7;
+            break;
+          }
+          user.resetPasswordToken = undefined;
+          user.resetPasswordExpire = undefined;
+          _context4.n = 7;
+          return user.save({
+            validateBeforeSave: false
+          });
+        case 7:
+          return _context4.a(2, res.status(500).json({
+            success: false,
+            message: "Email could not be sent"
+          }));
+        case 8:
+          return _context4.a(2);
+      }
+    }, _callee4, null, [[1, 6]]);
+  }));
+  return function forgotPasswordController(_x7, _x8) {
+    return _ref4.apply(this, arguments);
+  };
+}();
+var resetPasswordController = /*#__PURE__*/function () {
+  var _ref5 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee5(req, res) {
+    var resetPasswordToken, user, token, _t5;
+    return _regenerator().w(function (_context5) {
+      while (1) switch (_context5.p = _context5.n) {
+        case 0:
+          _context5.p = 0;
+          // Get the token from the URL and hash it
+          resetPasswordToken = crypto.createHash("sha256").update(req.params.token).digest("hex");
+          _context5.n = 1;
+          return User.findOne({
+            resetPasswordToken: resetPasswordToken,
+            resetPasswordExpire: {
+              $gt: Date.now()
+            } // Ensure the token is still valid
+          });
+        case 1:
+          user = _context5.v;
+          if (user) {
+            _context5.n = 2;
+            break;
+          }
+          return _context5.a(2, res.status(400).json({
+            success: false,
+            message: "Invalid or expired password reset token"
+          }));
+        case 2:
+          // Update the password and clear the reset fields
+          user.password = req.body.password;
+          user.resetPasswordToken = undefined;
+          user.resetPasswordExpire = undefined;
+          _context5.n = 3;
+          return user.save();
+        case 3:
+          // Optionally, sign a new token for the user after password reset
+          token = jwt.sign({
+            id: user._id
+          }, process.env.JWT_SECRET);
+          res.status(200).json({
+            success: true,
+            message: "Password reset successful",
+            token: token
+          });
+          _context5.n = 5;
+          break;
+        case 4:
+          _context5.p = 4;
+          _t5 = _context5.v;
+          res.status(500).json({
+            success: false,
+            message: "Internal server error",
+            error: _t5.message
+          });
+        case 5:
+          return _context5.a(2);
+      }
+    }, _callee5, null, [[0, 4]]);
+  }));
+  return function resetPasswordController(_x9, _x0) {
+    return _ref5.apply(this, arguments);
+  };
+}();
+var updateUserController = /*#__PURE__*/function () {
+  var _ref6 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee6(req, res) {
+    var id, _req$body3, name, email, password, department, role, permissions, user, _t6;
+    return _regenerator().w(function (_context6) {
+      while (1) switch (_context6.p = _context6.n) {
+        case 0:
+          _context6.p = 0;
+          id = req.params.id;
+          _req$body3 = req.body, name = _req$body3.name, email = _req$body3.email, password = _req$body3.password, department = _req$body3.department, role = _req$body3.role, permissions = _req$body3.permissions;
+          _context6.n = 1;
+          return User.findById(id);
+        case 1:
+          user = _context6.v;
+          if (user) {
+            _context6.n = 2;
+            break;
+          }
+          return _context6.a(2, res.status(404).json({
+            success: false,
+            message: "User not found"
+          }));
+        case 2:
+          if (name) user.name = name;
+          if (email) user.email = email;
+          if (password) {
+            user.password = password;
+          }
+          if (role) {
+            user.role = role;
+            if (role !== "superadmin" && department) {
+              user.department = department;
+            }
+          }
+          if (permissions) {
+            user.assignPermissions(permissions);
+          }
+          _context6.n = 3;
+          return user.save();
+        case 3:
+          res.status(200).json({
+            success: true,
+            message: "User updated successfully",
+            data: user
+          });
+          _context6.n = 5;
+          break;
+        case 4:
+          _context6.p = 4;
+          _t6 = _context6.v;
+          console.error(_t6);
+          res.status(500).json({
+            success: false,
+            message: "Server error",
+            error: _t6
+          });
+        case 5:
+          return _context6.a(2);
+      }
+    }, _callee6, null, [[0, 4]]);
+  }));
+  return function updateUserController(_x1, _x10) {
+    return _ref6.apply(this, arguments);
+  };
+}();
+var getUserController = /*#__PURE__*/function () {
+  var _ref7 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee7(req, res) {
+    var user, _t7;
+    return _regenerator().w(function (_context7) {
+      while (1) switch (_context7.p = _context7.n) {
+        case 0:
+          _context7.p = 0;
+          _context7.n = 1;
+          return User.find().populate("department", "name href");
+        case 1:
+          user = _context7.v;
+          if (user) {
+            _context7.n = 2;
+            break;
+          }
+          return _context7.a(2, res.status(404).json({
+            success: false,
+            message: "User not found"
+          }));
+        case 2:
+          res.status(200).json({
+            success: true,
+            message: "User fetched successfully",
+            data: user
+          });
+          _context7.n = 4;
+          break;
+        case 3:
+          _context7.p = 3;
+          _t7 = _context7.v;
+          console.error(_t7);
+          res.status(500).json({
+            success: false,
+            message: "Server error",
+            error: _t7
+          });
+        case 4:
+          return _context7.a(2);
+      }
+    }, _callee7, null, [[0, 3]]);
+  }));
+  return function getUserController(_x11, _x12) {
+    return _ref7.apply(this, arguments);
+  };
+}();
+var deleteUserController = /*#__PURE__*/function () {
+  var _ref8 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee8(req, res) {
+    var id, user, _t8;
+    return _regenerator().w(function (_context8) {
+      while (1) switch (_context8.p = _context8.n) {
+        case 0:
+          _context8.p = 0;
+          id = req.params.id;
+          _context8.n = 1;
+          return User.findByIdAndDelete(id);
+        case 1:
+          user = _context8.v;
+          if (user) {
+            _context8.n = 2;
+            break;
+          }
+          return _context8.a(2, res.status(404).json({
+            success: false,
+            message: "User not found"
+          }));
+        case 2:
+          res.status(200).json({
+            success: true,
+            message: "User deleted successfully",
+            data: user
+          });
+          _context8.n = 4;
+          break;
+        case 3:
+          _context8.p = 3;
+          _t8 = _context8.v;
+          console.error(_t8);
+          res.status(500).json({
+            success: false,
+            message: "Internal server error"
+          });
+        case 4:
+          return _context8.a(2);
+      }
+    }, _callee8, null, [[0, 3]]);
+  }));
+  return function deleteUserController(_x13, _x14) {
+    return _ref8.apply(this, arguments);
+  };
+}();
+var getUserByDepartmentController = /*#__PURE__*/function () {
+  var _ref9 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee9(req, res) {
+    var department, user, _t9;
+    return _regenerator().w(function (_context9) {
+      while (1) switch (_context9.p = _context9.n) {
+        case 0:
+          _context9.p = 0;
+          department = req.user.department;
+          _context9.n = 1;
+          return User.find({
+            department: department
+          }).populate("department", "name href");
+        case 1:
+          user = _context9.v;
+          if (user) {
+            _context9.n = 2;
+            break;
+          }
+          return _context9.a(2, res.status(404).json({
+            success: false,
+            message: "User not found"
+          }));
+        case 2:
+          res.status(200).json({
+            success: true,
+            message: "User fetched successfully",
+            data: user
+          });
+          _context9.n = 4;
+          break;
+        case 3:
+          _context9.p = 3;
+          _t9 = _context9.v;
+          console.error(_t9);
+          res.status(500).json({
+            success: false,
+            message: "Server error",
+            error: _t9
+          });
+        case 4:
+          return _context9.a(2);
+      }
+    }, _callee9, null, [[0, 3]]);
+  }));
+  return function getUserByDepartmentController(_x15, _x16) {
+    return _ref9.apply(this, arguments);
+  };
+}();
+var getUserByTokenController = /*#__PURE__*/function () {
+  var _ref0 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee0(req, res) {
+    var _id, user, _t0;
+    return _regenerator().w(function (_context0) {
+      while (1) switch (_context0.p = _context0.n) {
+        case 0:
+          _context0.p = 0;
+          _id = req.user._id;
+          _context0.n = 1;
+          return User.findById(_id);
+        case 1:
+          user = _context0.v;
+          if (user) {
+            _context0.n = 2;
+            break;
+          }
+          return _context0.a(2, res.status(404).json({
+            success: false,
+            message: "User not found"
+          }));
+        case 2:
+          res.status(200).json({
+            success: true,
+            message: "User fetched successfully",
+            data: user
+          });
+          _context0.n = 4;
+          break;
+        case 3:
+          _context0.p = 3;
+          _t0 = _context0.v;
+          console.error(_t0);
+          res.status(500).json({
+            success: false,
+            message: "Server error",
+            error: _t0
+          });
+        case 4:
+          return _context0.a(2);
+      }
+    }, _callee0, null, [[0, 3]]);
+  }));
+  return function getUserByTokenController(_x17, _x18) {
+    return _ref0.apply(this, arguments);
+  };
+}();
+var updateUserByTokenController = /*#__PURE__*/function () {
+  var _ref1 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee1(req, res) {
+    var _id, updateData, salt, user, _t1;
+    return _regenerator().w(function (_context1) {
+      while (1) switch (_context1.p = _context1.n) {
+        case 0:
+          _context1.p = 0;
+          _id = req.user._id;
+          updateData = _objectSpread({}, req.body); // Hash the password if it's provided in the update
+          if (!updateData.password) {
+            _context1.n = 3;
+            break;
+          }
+          _context1.n = 1;
+          return bcrypt.genSalt(10);
+        case 1:
+          salt = _context1.v;
+          _context1.n = 2;
+          return bcrypt.hash(updateData.password, salt);
+        case 2:
+          updateData.password = _context1.v;
+        case 3:
+          _context1.n = 4;
+          return User.findByIdAndUpdate(_id, updateData, {
+            "new": true
+          });
+        case 4:
+          user = _context1.v;
+          if (user) {
+            _context1.n = 5;
+            break;
+          }
+          return _context1.a(2, res.status(404).json({
+            success: false,
+            message: "User not found"
+          }));
+        case 5:
+          res.status(200).json({
+            success: true,
+            message: "User updated successfully",
+            data: user
+          });
+          _context1.n = 7;
+          break;
+        case 6:
+          _context1.p = 6;
+          _t1 = _context1.v;
+          console.error("update", _t1);
+          res.status(500).json({
+            success: false,
+            message: "Server error",
+            error: _t1
+          });
+        case 7:
+          return _context1.a(2);
+      }
+    }, _callee1, null, [[0, 6]]);
+  }));
+  return function updateUserByTokenController(_x19, _x20) {
+    return _ref1.apply(this, arguments);
+  };
+}();
+module.exports = {
+  userLoginController: userLoginController,
+  createUserController: createUserController,
+  superAdminSignupController: superAdminSignupController,
+  forgotPasswordController: forgotPasswordController,
+  resetPasswordController: resetPasswordController,
+  updateUserController: updateUserController,
+  getUserController: getUserController,
+  deleteUserController: deleteUserController,
+  getUserByDepartmentController: getUserByDepartmentController,
+  getUserByTokenController: getUserByTokenController,
+  updateUserByTokenController: updateUserByTokenController
+};
