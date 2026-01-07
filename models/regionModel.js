@@ -9,7 +9,12 @@ const branchesSchema = new mongoose.Schema({
     ar: String,
   },
   href: { type: String, unique: true },
-  image: String,
+  slider: [
+    {
+      image: String,
+      heading: { en: String, ar: String },
+    },
+  ],
   description: {
     en: String,
     ar: String,
